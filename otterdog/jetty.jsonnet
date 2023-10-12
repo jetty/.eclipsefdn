@@ -29,8 +29,6 @@ orgs.newOrg('jetty') {
       delete_branch_on_merge: false,
       description: "Contents and release generation for display on https://eclipse.dev/jetty",
       homepage: "https://eclipse.dev/jetty",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       webhooks: [
         orgs.newRepoWebhook('https://jenkins.webtide.net/github-webhook/') {
@@ -53,8 +51,6 @@ orgs.newOrg('jetty') {
       has_projects: false,
       has_wiki: false,
       homepage: "http://www.eclipse.org/jetty",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       webhooks: [
         orgs.newRepoWebhook('https://jenkins.webtide.net/github-webhook/') {
@@ -74,8 +70,6 @@ orgs.newOrg('jetty') {
       dependabot_security_updates_enabled: true,
       description: "jetty docker",
       has_wiki: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       webhooks: [
         orgs.newRepoWebhook('https://jenkins.webtide.net/github-webhook/') {
@@ -94,8 +88,6 @@ orgs.newOrg('jetty') {
       description: "Eclipse Jetty® - Servlet Engine and Http Server project repository (jetty.parent)",
       has_issues: false,
       homepage: "http://www.eclipse.org/jetty",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('jetty.project') {
@@ -106,8 +98,6 @@ orgs.newOrg('jetty') {
       description: "Eclipse Jetty® - Web Container & Clients - supports HTTP/2, HTTP/1.1, HTTP/1.0, websocket, servlets, and more",
       has_wiki: false,
       homepage: "https://eclipse.dev/jetty",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "eclipse",
         "embedded",
@@ -168,8 +158,6 @@ orgs.newOrg('jetty') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse Jetty® - Servlet Engine and Http Server project repository (jetty.toolchain)",
       homepage: "http://www.eclipse.org/jetty",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       webhooks: [
         orgs.newRepoWebhook('https://jenkins.webtide.net/github-webhook/') {
