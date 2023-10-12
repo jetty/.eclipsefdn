@@ -10,7 +10,6 @@ orgs.newOrg('jetty') {
     dependency_graph_enabled_for_new_repositories: false,
     description: "The Eclipse Jetty Project",
     email: "jetty-dev@eclipse.org",
-    members_can_change_project_visibility: true,
     name: "Eclipse Jetty",
     packages_containers_internal: false,
     packages_containers_public: false,
