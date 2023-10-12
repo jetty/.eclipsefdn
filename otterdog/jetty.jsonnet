@@ -56,6 +56,15 @@ orgs.newOrg('jetty') {
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
+      webhooks: [
+        orgs.newRepoWebhook('https://jenkins.webtide.net/github-webhook/') {
+          content_type: "json",
+          events+: [
+            "pull_request",
+            "push"
+          ],
+        },
+      ],
     },
     orgs.newRepo('jetty.docker') {
       allow_merge_commit: true,
@@ -166,11 +175,8 @@ orgs.newOrg('jetty') {
         orgs.newRepoWebhook('https://jenkins.webtide.net/github-webhook/') {
           content_type: "json",
           events+: [
-            "create",
-            "delete",
             "pull_request",
-            "push",
-            "release"
+            "push"
           ],
         },
       ],
