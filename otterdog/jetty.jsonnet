@@ -132,43 +132,8 @@ orgs.newOrg('jetty') {
           ],
         },
       ],
-      branch_protection_rules: [
-        orgs.newBranchProtectionRule('jetty-9.4.x') {
-          bypass_pull_request_allowances+: [
-            "@gregw",
-            "@janbartel",
-            "@sbordet",
-            "@joakime"
-          ],
-          dismisses_stale_reviews: true,
-          required_approving_review_count: 1,
-          required_status_checks+: [
-            "any:continuous-integration/jenkins/pr-merge",
-          ],
-        },
-        orgs.newBranchProtectionRule('jetty-10.0.x') {
-          bypass_pull_request_allowances+: [
-            "@gregw",
-            "@janbartel",
-            "@sbordet",
-            "@joakime"
-          ],
-          dismisses_stale_reviews: true,
-          required_approving_review_count: 1,
-          required_status_checks+: [
-            "any:continuous-integration/jenkins/pr-merge",
-          ],
-        },
-        orgs.newBranchProtectionRule('jetty-12.0.x') {
-          bypass_pull_request_allowances+: [
-            "@gregw",
-            "@janbartel",
-            "@sbordet",
-            "@joakime"
-          ],
-          required_approving_review_count: 1,
-        },
-      ],
+      # branch protection rules have been converted to a repository ruleset
+      # in order to support required status checks with a bypass list.
     },
     orgs.newRepo('jetty.toolchain') {
       allow_merge_commit: true,
