@@ -138,10 +138,6 @@ orgs.newOrg('jetty') {
             "@joakime"
           ],
           dismisses_stale_reviews: true,
-          push_restrictions+: [
-            "@gregw",
-            "@sbordet"
-          ],
           required_approving_review_count: 1,
           required_status_checks+: [
             "any:continuous-integration/jenkins/pr-merge",
@@ -155,10 +151,6 @@ orgs.newOrg('jetty') {
             "@joakime"
           ],
           dismisses_stale_reviews: true,
-          push_restrictions+: [
-            "@gregw",
-            "@sbordet"
-          ],
           required_approving_review_count: 1,
           required_status_checks+: [
             "any:continuous-integration/jenkins/pr-merge",
@@ -170,10 +162,6 @@ orgs.newOrg('jetty') {
             "@janbartel",
             "@sbordet",
             "@joakime"
-          ],
-          push_restrictions+: [
-            "@gregw",
-            "@sbordet"
           ],
           required_approving_review_count: 1,
         },
