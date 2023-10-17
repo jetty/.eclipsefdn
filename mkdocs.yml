@@ -1,6 +1,6 @@
 site_name: Otterdog configuration @ jetty
 site_description: Otterdog configuration @ jetty
-strict: true
+strict: false
 
 site_url: https://jetty.github.io/.eclipsefdn/
 
