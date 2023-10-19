@@ -114,6 +114,7 @@ orgs.newOrg('jetty') {
         "http-client",
         "http-server",
         "http2",
+        "http2-client",
         "http2-push",
         "http3",
         "https",
