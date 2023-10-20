@@ -160,9 +160,14 @@ orgs.newOrg('jetty') {
         },
       ],
     },
-    orgs.newRepo('jetty.website') {
-      archived: true,
+   orgs.newRepo('jetty.website') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
       default_branch: "master",
+      delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
+      description: "Eclipse Jetty® - Under Construction",
+      homepage: "http://jetty.org",
       web_commit_signoff_required: false,
     },
   ],
