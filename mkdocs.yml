@@ -4,6 +4,9 @@ strict: false
 
 site_url: https://jetty.github.io/.eclipsefdn/
 
+repo_name: jetty/.eclipsefdn
+repo_url: https://github.com/jetty/.eclipsefdn/
+
 docs_dir: ./docs
 site_dir: ./_site
 
