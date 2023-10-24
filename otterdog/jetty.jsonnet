@@ -4,7 +4,6 @@ orgs.newOrg('jetty') {
   settings+: {
     billing_email: "wayne.beaton@eclipse-foundation.org",
     blog: "https://eclipse.dev/jetty",
-    default_repository_permission: "none",
     dependabot_alerts_enabled_for_new_repositories: false,
     dependabot_security_updates_enabled_for_new_repositories: false,
     dependency_graph_enabled_for_new_repositories: false,
@@ -29,6 +28,9 @@ orgs.newOrg('jetty') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
     },
     orgs.newRepo('jetty-website') {
       allow_merge_commit: true,
@@ -38,6 +40,9 @@ orgs.newOrg('jetty') {
       description: "Contents and release generation for display on https://eclipse.dev/jetty",
       homepage: "https://eclipse.dev/jetty",
       web_commit_signoff_required: false,
+      workflows+: {
+        enabled: false,
+      },
       webhooks: [
         orgs.newRepoWebhook('https://jenkins.webtide.net/github-webhook/') {
           content_type: "json",
@@ -60,6 +65,9 @@ orgs.newOrg('jetty') {
       has_wiki: false,
       homepage: "http://www.eclipse.org/jetty",
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
       webhooks: [
         orgs.newRepoWebhook('https://jenkins.webtide.net/github-webhook/') {
           content_type: "json",
@@ -79,6 +87,9 @@ orgs.newOrg('jetty') {
       description: "jetty docker",
       has_wiki: false,
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
       webhooks: [
         orgs.newRepoWebhook('https://jenkins.webtide.net/github-webhook/') {
           events+: [
@@ -92,6 +103,9 @@ orgs.newOrg('jetty') {
       archived: true,
       description: "Eclipse Jetty® - Archived Repository",
       has_issues: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
     },
     orgs.newRepo('jetty.project') {
       allow_merge_commit: true,
@@ -124,6 +138,9 @@ orgs.newOrg('jetty') {
         "websockets"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
       webhooks: [
         orgs.newRepoWebhook('https://jenkins.webtide.net/github-webhook/') {
           content_type: "json",
@@ -133,8 +150,40 @@ orgs.newOrg('jetty') {
           ],
         },
       ],
-      # branch protection rules have been converted to a repository ruleset
-      # in order to support required status checks with a bypass list.
+      rulesets: [
+        orgs.newRepoRuleset('protect-mainline-branches') {
+          allows_creations: true,
+          allows_updates: true,
+          bypass_actors+: [
+            "@jetty/rt-jetty-pmc"
+          ],
+          include_refs+: [
+            "refs/heads/jetty-10.0.x",
+            "refs/heads/jetty-12.0.x",
+            "refs/heads/jetty-9.4.x"
+          ],
+          required_approving_review_count: 1,
+          required_status_checks+: [
+            "continuous-integration/jenkins/pr-merge"
+          ],
+          requires_commit_signatures: false,
+          requires_last_push_approval: false,
+          requires_review_thread_resolution: false,
+        },
+      ],
+    },
+    orgs.newRepo('jetty.setuid') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      default_branch: "master",
+      delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
+      description: "Eclipse Jetty® - SetUID Module",
+      homepage: "http://eclipse.org/jetty",
+      web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
     },
     orgs.newRepo('jetty.toolchain') {
       allow_merge_commit: true,
@@ -145,6 +194,9 @@ orgs.newOrg('jetty') {
       description: "Eclipse Jetty® - Servlet Engine and Http Server project repository (jetty.toolchain)",
       homepage: "http://www.eclipse.org/jetty",
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
       webhooks: [
         orgs.newRepoWebhook('https://jenkins.webtide.net/github-webhook/') {
           content_type: "json",
@@ -155,7 +207,7 @@ orgs.newOrg('jetty') {
         },
       ],
     },
-   orgs.newRepo('jetty.website') {
+    orgs.newRepo('jetty.website') {
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -164,16 +216,9 @@ orgs.newOrg('jetty') {
       description: "Eclipse Jetty® - Under Construction",
       homepage: "http://jetty.org",
       web_commit_signoff_required: false,
-    },
-   orgs.newRepo('jetty.setuid') {
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      default_branch: "master",
-      delete_branch_on_merge: false,
-      dependabot_security_updates_enabled: true,
-      description: "Eclipse Jetty® - SetUID Module",
-      homepage: "http://eclipse.org/jetty",
-      web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
     },
   ],
 }
