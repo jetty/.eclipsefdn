@@ -89,14 +89,9 @@ orgs.newOrg('jetty') {
       ],
     },
     orgs.newRepo('jetty.parent') {
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      default_branch: "master",
-      delete_branch_on_merge: false,
-      description: "Eclipse Jetty® - Servlet Engine and Http Server project repository (jetty.parent)",
+      archived: true,
+      description: "Eclipse Jetty® - Archived Repository",
       has_issues: false,
-      homepage: "http://www.eclipse.org/jetty",
-      web_commit_signoff_required: false,
     },
     orgs.newRepo('jetty.project') {
       allow_merge_commit: true,
