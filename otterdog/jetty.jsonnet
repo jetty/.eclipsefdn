@@ -184,6 +184,19 @@ orgs.newOrg('jetty') {
         actions_can_approve_pull_request_reviews: false,
       },
     },
+    orgs.newRepo('jetty.test.helper') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      default_branch: "main",
+      delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
+      description: "Eclipse Jetty® - Test Helper",
+      homepage: "http://eclipse.org/jetty",
+      web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
+    },
     orgs.newRepo('jetty.toolchain') {
       allow_merge_commit: true,
       allow_update_branch: false,
