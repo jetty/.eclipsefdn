@@ -20,16 +20,16 @@ orgs.newOrg('jetty') {
     workflows+: {
       actions_can_approve_pull_request_reviews: false,
     },
-    webhooks: [
-      orgs.newOrgWebhook('https://jenkins.webtide.net/github-webhook/') {
-        content_type: "json",
-        events+: [
-          "pull_request",
-          "push"
-        ],
-      },
-    ],
   },
+  webhooks+: [
+    orgs.newOrgWebhook('https://jenkins.webtide.net/github-webhook/') {
+      content_type: "json",
+      events+: [
+        "pull_request",
+        "push"
+      ],
+    },
+  ],
   _repositories+:: [
     orgs.newRepo('.github') {
       allow_merge_commit: true,
