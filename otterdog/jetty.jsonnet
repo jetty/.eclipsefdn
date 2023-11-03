@@ -239,11 +239,17 @@ orgs.newOrg('jetty') {
     orgs.newRepo('jetty.servlet.api') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "main",
+      default_branch: "jakarta-servlet-api",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Eclipse Jetty® - Servlet API (javax and jakarta)",
       homepage: "http://eclipse.org/jetty",
+      topics+: [
+              "eclipse",
+              "jetty",
+              "servlet",
+              "jakartaee"
+            ],
       web_commit_signoff_required: false,
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
@@ -252,11 +258,17 @@ orgs.newOrg('jetty') {
     orgs.newRepo('jetty.websocket.api') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "main",
+      default_branch: "jakarta-websocket-api",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Eclipse Jetty® - WebSocket API (javax and jakarta)",
       homepage: "http://eclipse.org/jetty",
+      topics+: [
+              "eclipse",
+              "jetty",
+              "websocket",
+              "jakartaee"
+            ],
       web_commit_signoff_required: false,
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
