@@ -21,15 +21,6 @@ orgs.newOrg('jetty') {
       actions_can_approve_pull_request_reviews: false,
     },
   },
-  webhooks+: [
-    orgs.newOrgWebhook('https://jenkins.webtide.net/github-webhook/') {
-      content_type: "json",
-      events+: [
-        "pull_request",
-        "push"
-      ],
-    },
-  ],
   _repositories+:: [
     orgs.newRepo('.github') {
       allow_merge_commit: true,
@@ -54,6 +45,15 @@ orgs.newOrg('jetty') {
       workflows+: {
         enabled: false,
       },
+      webhooks: [
+        orgs.newRepoWebhook('https://jenkins.webtide.net/github-webhook/') {
+          content_type: "json",
+          events+: [
+            "pull_request",
+            "push"
+          ],
+        },
+      ],
     },
     orgs.newRepo('jetty.alpn.api') {
       allow_merge_commit: true,
@@ -70,6 +70,15 @@ orgs.newOrg('jetty') {
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
+      webhooks: [
+        orgs.newRepoWebhook('https://jenkins.webtide.net/github-webhook/') {
+          content_type: "json",
+          events+: [
+            "pull_request",
+            "push"
+          ],
+        },
+      ],
     },
     orgs.newRepo('jetty.artifact.resources') {
       allow_merge_commit: true,
@@ -123,6 +132,14 @@ orgs.newOrg('jetty') {
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
+      webhooks: [
+        orgs.newRepoWebhook('https://jenkins.webtide.net/github-webhook/') {
+          events+: [
+            "pull_request",
+            "push"
+          ],
+        },
+      ],
     },
     orgs.newRepo('jetty.parent') {
       archived: true,
@@ -183,6 +200,15 @@ orgs.newOrg('jetty') {
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
+      webhooks: [
+        orgs.newRepoWebhook('https://jenkins.webtide.net/github-webhook/') {
+          content_type: "json",
+          events+: [
+            "pull_request",
+            "push"
+          ],
+        },
+      ],
       rulesets: [
         orgs.newRepoRuleset('protect-mainline-branches') {
           allows_creations: true,
@@ -304,6 +330,15 @@ orgs.newOrg('jetty') {
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
+      webhooks: [
+        orgs.newRepoWebhook('https://jenkins.webtide.net/github-webhook/') {
+          content_type: "json",
+          events+: [
+            "pull_request",
+            "push"
+          ],
+        },
+      ],
     },
     orgs.newRepo('jetty.website') {
       allow_merge_commit: true,
