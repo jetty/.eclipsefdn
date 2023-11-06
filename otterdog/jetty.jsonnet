@@ -298,7 +298,13 @@ orgs.newOrg('jetty') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse Jetty® - Test Helper",
       has_wiki: false,
-      homepage: "https://eclipse.dev/jetty",
+      homepage: "https://jetty.org/",
+      topics+: [
+              "eclipse",
+              "jetty",
+              "testing",
+              "junit"
+            ],
       web_commit_signoff_required: false,
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
