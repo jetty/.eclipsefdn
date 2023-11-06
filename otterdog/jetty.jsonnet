@@ -311,6 +311,7 @@ orgs.newOrg('jetty') {
       },
     },
     orgs.newRepo('jetty.test.policy') {
+      archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
