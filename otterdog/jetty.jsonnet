@@ -310,7 +310,8 @@ orgs.newOrg('jetty') {
         actions_can_approve_pull_request_reviews: false,
       },
     },
-    orgs.newRepo('jetty.test.policy') {
+    orgs.newRepo('jetty-test-policy') {
+      aliases: ["jetty.test.policy"],
       archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
