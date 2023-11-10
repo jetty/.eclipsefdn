@@ -55,7 +55,8 @@ orgs.newOrg('jetty') {
         },
       ],
     },
-    orgs.newRepo('jetty.alpn.api') {
+    orgs.newRepo('jetty-alpn-api') {
+      aliases: ["jetty.alpn.api"],
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -80,7 +81,8 @@ orgs.newOrg('jetty') {
         },
       ],
     },
-    orgs.newRepo('jetty.artifact.resources') {
+    orgs.newRepo('jetty-artifact-remote-resources') {
+      aliases: ["jetty.artifact.resources"],
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -93,7 +95,8 @@ orgs.newOrg('jetty') {
         actions_can_approve_pull_request_reviews: false,
       },
     },
-    orgs.newRepo('jetty.assembly.descriptors') {
+    orgs.newRepo('jetty-assembly-descriptors') {
+      aliases: ["jetty.assembly.descriptors"],
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -106,7 +109,8 @@ orgs.newOrg('jetty') {
         actions_can_approve_pull_request_reviews: false,
       },
     },
-    orgs.newRepo('jetty.build.support') {
+    orgs.newRepo('jetty-build-support') {
+      aliases: ["jetty.build.support"],
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -142,7 +146,6 @@ orgs.newOrg('jetty') {
       ],
     },
     orgs.newRepo('jetty.parent') {
-      archived: true,
       dependabot_alerts_enabled: false,
       description: "Eclipse Jetty® - Archived Repository",
       has_issues: false,
@@ -153,7 +156,8 @@ orgs.newOrg('jetty') {
         actions_can_approve_pull_request_reviews: false,
       },
     },
-    orgs.newRepo('jetty.perf.helper') {
+    orgs.newRepo('jetty-perf-helper') {
+      aliases: ["jetty.perf.helper"],
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -231,7 +235,8 @@ orgs.newOrg('jetty') {
         },
       ],
     },
-    orgs.newRepo('jetty.schemas') {
+    orgs.newRepo('jetty-schemas') {
+      aliases: ["jetty.schemas"],
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -244,7 +249,8 @@ orgs.newOrg('jetty') {
         actions_can_approve_pull_request_reviews: false,
       },
     },
-    orgs.newRepo('jetty.schemas.xhtml') {
+    orgs.newRepo('jetty-xhtml-schemas') {
+      aliases: ["jetty.schemas.xhtml"],
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -257,7 +263,8 @@ orgs.newOrg('jetty') {
         actions_can_approve_pull_request_reviews: false,
       },
     },
-    orgs.newRepo('jetty.servlet.api') {
+    orgs.newRepo('jetty-servlet-api') {
+      aliases: ["jetty.servlet.api"],
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "jakarta-servlet-api",
@@ -277,7 +284,8 @@ orgs.newOrg('jetty') {
         actions_can_approve_pull_request_reviews: false,
       },
     },
-    orgs.newRepo('jetty.setuid') {
+    orgs.newRepo('jetty-setuid-jna') {
+      aliases: ["jetty.setuid"],
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -291,7 +299,8 @@ orgs.newOrg('jetty') {
         actions_can_approve_pull_request_reviews: false,
       },
     },
-    orgs.newRepo('jetty.test.helper') {
+    orgs.newRepo('jetty-test-helper') {
+      aliases: ["jetty.test.helper"],
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -311,7 +320,6 @@ orgs.newOrg('jetty') {
       },
     },
     orgs.newRepo('jetty-test-policy') {
-      aliases: ["jetty.test.policy"],
       archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
@@ -325,7 +333,8 @@ orgs.newOrg('jetty') {
         actions_can_approve_pull_request_reviews: false,
       },
     },
-    orgs.newRepo('jetty.toolchain') {
+    orgs.newRepo('jetty-toolchain') {
+      aliases: ["jetty.toolchain"],
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -363,7 +372,6 @@ orgs.newOrg('jetty') {
       },
     },
     orgs.newRepo('jetty.website.2020') {
-      archived: true,
       default_branch: "master",
       dependabot_alerts_enabled: false,
       dependabot_security_updates_enabled: true,
@@ -376,7 +384,8 @@ orgs.newOrg('jetty') {
         actions_can_approve_pull_request_reviews: false,
       },
     },
-    orgs.newRepo('jetty.websocket.api') {
+    orgs.newRepo('jetty-websocket-api') {
+      aliases: ["jetty.websocket.api"],
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "jakarta-websocket-api",
