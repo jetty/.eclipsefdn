@@ -145,7 +145,8 @@ orgs.newOrg('jetty') {
         },
       ],
     },
-    orgs.newRepo('jetty.parent') {
+    orgs.newRepo('jetty-parent') {
+      aliases: ["jetty.parent"],
       dependabot_alerts_enabled: false,
       description: "Eclipse Jetty® - Archived Repository",
       has_issues: false,
@@ -371,7 +372,8 @@ orgs.newOrg('jetty') {
         actions_can_approve_pull_request_reviews: false,
       },
     },
-    orgs.newRepo('jetty.website.2020') {
+    orgs.newRepo('jetty-website-2020') {
+      aliases: ["jetty.website.2020"],
       default_branch: "master",
       dependabot_alerts_enabled: false,
       dependabot_security_updates_enabled: true,
