@@ -358,6 +358,29 @@ orgs.newOrg('jetty') {
         },
       ],
     },
+    orgs.newRepo('jetty-toolchain-parent') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      default_branch: "master",
+      delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
+      description: "Eclipse Jetty® - Jetty Toolchain Parent",
+      has_wiki: false,
+      homepage: "https://eclipse.dev/jetty",
+      web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
+      webhooks: [
+        orgs.newRepoWebhook('https://jenkins.webtide.net/github-webhook/') {
+          content_type: "json",
+          events+: [
+            "pull_request",
+            "push"
+          ],
+        },
+      ],
+    },
     orgs.newRepo('jetty.website') {
       allow_merge_commit: true,
       allow_update_branch: false,
