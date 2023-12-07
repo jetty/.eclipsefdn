@@ -146,16 +146,27 @@ orgs.newOrg('jetty') {
       ],
     },
     orgs.newRepo('jetty-parent') {
-      archived: true,
-      dependabot_alerts_enabled: false,
-      description: "Eclipse Jetty® - Archived Repository",
-      has_issues: false,
+      archived: false,
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
+      description: "Eclipse Jetty® - Parent Pom",
       has_wiki: false,
       homepage: "https://eclipse.dev/jetty",
-      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
+      webhooks: [
+        orgs.newRepoWebhook('https://jenkins.webtide.net/github-webhook/') {
+          content_type: "json",
+          events+: [
+            "pull_request",
+            "push"
+          ],
+        },
+      ],      
     },
     orgs.newRepo('jetty-perf-helper') {
       aliases: ["jetty.perf.helper"],
