@@ -324,7 +324,7 @@ orgs.newOrg('jetty') {
     orgs.newRepo('jetty.project') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "jetty-10.0.x",
+      default_branch: "jetty-12.0.x",
       delete_branch_on_merge: false,
       description: "Eclipse Jetty® - Web Container & Clients - supports HTTP/2, HTTP/1.1, HTTP/1.0, websocket, servlets, and more",
       has_wiki: false,
