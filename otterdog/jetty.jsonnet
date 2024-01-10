@@ -97,6 +97,19 @@ orgs.newOrg('jetty') {
         actions_can_approve_pull_request_reviews: false,
       },
     },
+    orgs.newRepo('jetty-examples') {
+      allow_merge_commit: true,
+      allow_update_branch: true,
+      delete_branch_on_merge: true,
+      dependabot_security_updates_enabled: true,
+      description: "Eclipse Jetty® - Examples",
+      has_wiki: true,
+      homepage: "https://eclipse.dev/jetty",
+      web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
+    },
     orgs.newRepo('jetty-parent') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse Jetty® - Parent Pom",
