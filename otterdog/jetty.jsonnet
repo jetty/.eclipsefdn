@@ -100,6 +100,7 @@ orgs.newOrg('jetty') {
     orgs.newRepo('jetty-examples') {
       allow_merge_commit: true,
       allow_update_branch: true,
+      default_branch: "12.0.x",
       delete_branch_on_merge: true,
       dependabot_security_updates_enabled: true,
       description: "Eclipse Jetty® - Examples",
