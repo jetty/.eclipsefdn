@@ -3,19 +3,14 @@ local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 orgs.newOrg('jetty') {
   settings+: {
     blog: "https://eclipse.dev/jetty",
-    dependabot_alerts_enabled_for_new_repositories: false,
     dependabot_security_updates_enabled_for_new_repositories: false,
-    dependency_graph_enabled_for_new_repositories: false,
     description: "The Eclipse Jetty Project",
     email: "jetty-dev@eclipse.org",
     name: "Eclipse Jetty",
-    packages_containers_internal: false,
-    packages_containers_public: false,
     readers_can_create_discussions: true,
     security_managers+: [
       "rt-jetty-committers"
     ],
-    two_factor_requirement: false,
     web_commit_signoff_required: false,
     workflows+: {
       actions_can_approve_pull_request_reviews: false,
