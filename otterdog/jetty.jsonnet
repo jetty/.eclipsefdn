@@ -331,7 +331,8 @@ orgs.newOrg('jetty') {
         },
       ],
     },
-    orgs.newRepo('jetty.website') {
+    orgs.newRepo('jetty.website.delete') {
+      aliases: ['jetty.website'],
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
