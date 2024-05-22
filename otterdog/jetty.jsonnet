@@ -336,8 +336,6 @@ orgs.newOrg('jetty') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       gh_pages_build_type: "workflow",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       secrets: [
         orgs.newRepoSecret('RELEASE_TOKEN') {
