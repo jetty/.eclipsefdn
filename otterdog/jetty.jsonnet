@@ -169,7 +169,6 @@ orgs.newOrg('jetty') {
       description: "Eclipse Jetty® - Test Policy",
       has_wiki: false,
       homepage: "https://eclipse.dev/jetty",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('jetty-toolchain') {
@@ -220,7 +219,6 @@ orgs.newOrg('jetty') {
       description: "Eclipse Jetty® - Under Construction",
       has_wiki: false,
       homepage: "http://jetty.org",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('jetty-websocket-api') {
