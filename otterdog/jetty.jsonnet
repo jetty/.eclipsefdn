@@ -2,7 +2,7 @@ local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
 orgs.newOrg('jetty') {
   settings+: {
-    blog: "https://eclipse.dev/jetty",
+    blog: "https://jetty.org",
     dependabot_security_updates_enabled_for_new_repositories: false,
     description: "The Eclipse Jetty Project",
     email: "jetty-dev@eclipse.org",
@@ -192,33 +192,22 @@ orgs.newOrg('jetty') {
       ],
     },
     orgs.newRepo('jetty-website') {
+      archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
-      description: "Contents and release generation for display on https://eclipse.dev/jetty",
+      description: "Old jetty website for https://eclipse.dev/jetty",
       has_wiki: false,
       homepage: "https://eclipse.dev/jetty",
       web_commit_signoff_required: false,
-      workflows+: {
-        enabled: false,
-      },
-      webhooks: [
-        orgs.newRepoWebhook('https://jenkins.webtide.net/github-webhook/') {
-          content_type: "json",
-          events+: [
-            "pull_request",
-            "push"
-          ],
-        },
-      ],
     },
     orgs.newRepo('jetty-website-2020') {
       archived: true,
       default_branch: "master",
-      description: "Eclipse Jetty® - Under Construction",
+      description: "Old Jetty Website",
       has_wiki: false,
-      homepage: "http://jetty.org",
+      homepage: "https://eclipse.dev/jetty",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('jetty-websocket-api') {
@@ -335,6 +324,8 @@ orgs.newOrg('jetty') {
       delete_branch_on_merge: false,
       gh_pages_build_type: "workflow",
       web_commit_signoff_required: false,
+      description: "Antora-based jetty.org website.",
+      homepage: "https://jetty.org",
       secrets: [
         orgs.newRepoSecret('RELEASE_TOKEN') {
           value: "********",
