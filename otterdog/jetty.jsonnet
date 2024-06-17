@@ -339,6 +339,15 @@ orgs.newOrg('jetty') {
           deployment_branch_policy: "selected",
         },
       ],
+      webhooks: [
+        orgs.newRepoWebhook('https://jenkins.webtide.net/github-webhook/') {
+          content_type: "json",
+          events+: [
+            "pull_request",
+            "push"
+          ],
+        },
+      ],
     },
   ],
 }
