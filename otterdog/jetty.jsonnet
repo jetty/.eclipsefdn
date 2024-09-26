@@ -298,7 +298,6 @@ orgs.newOrg('jetty') {
       rulesets: [
         orgs.newRepoRuleset('protect-mainline-branches') {
           allows_creations: true,
-          allows_updates: true,
           bypass_actors+: [
             "@jetty/rt-jetty-pmc"
           ],
@@ -307,13 +306,13 @@ orgs.newOrg('jetty') {
             "refs/heads/jetty-12.0.x",
             "refs/heads/jetty-9.4.x"
           ],
-          required_approving_review_count: 1,
+          required_pull_request+: {
+            required_approving_review_count: 1,
+            dismisses_stale_reviews: true,
+          },
           required_status_checks+: [
             "continuous-integration/jenkins/pr-merge"
           ],
-          requires_commit_signatures: false,
-          requires_last_push_approval: false,
-          requires_review_thread_resolution: false,
         },
       ],
     },
