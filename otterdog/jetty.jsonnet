@@ -310,9 +310,11 @@ orgs.newOrg('jetty') {
             required_approving_review_count: 1,
             dismisses_stale_reviews: true,
           },
-          required_status_checks+: [
-            "continuous-integration/jenkins/pr-merge"
-          ],
+          required_status_checks+: {
+            status_checks+: [
+              "continuous-integration/jenkins/pr-merge"
+            ],
+          },
         },
       ],
     },
