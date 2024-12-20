@@ -6,9 +6,6 @@ orgs.newOrg('rt.jetty', 'jetty') {
     description: "The Eclipse Jetty Project",
     email: "jetty-dev@eclipse.org",
     name: "Eclipse Jetty",
-    security_managers+: [
-      "rt-jetty-committers"
-    ],
     web_commit_signoff_required: false,
     workflows+: {
       actions_can_approve_pull_request_reviews: false,
