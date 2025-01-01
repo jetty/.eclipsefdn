@@ -11,6 +11,17 @@ orgs.newOrg('rt.jetty', 'jetty') {
       actions_can_approve_pull_request_reviews: false,
     },
   },
+  teams+: [
+    orgs.newTeam('rt-jetty-pmc') {
+      members+: [
+        "gregw",
+        "janbartel",
+        "jmcc0nn3ll",
+        "joakime",
+        "sbordet"
+      ],
+    },
+  ],
   _repositories+:: [
     orgs.newRepo('.github') {
       allow_merge_commit: true,
