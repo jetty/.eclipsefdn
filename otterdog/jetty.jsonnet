@@ -269,6 +269,7 @@ orgs.newOrg('rt.jetty', 'jetty') {
       default_branch: "jetty-12.0.x",
       delete_branch_on_merge: false,
       description: "Eclipse Jetty® - Web Container & Clients - supports HTTP/2, HTTP/1.1, HTTP/1.0, websocket, servlets, and more",
+      has_discussions: true,
       has_wiki: false,
       homepage: "https://eclipse.dev/jetty",
       topics+: [
