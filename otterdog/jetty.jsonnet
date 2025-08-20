@@ -2,7 +2,7 @@ local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
 orgs.newOrg('jetty') {
   settings+: {
-    blog: "https://eclipse.dev/jetty",
+    blog: "https://jetty.org/",
     dependabot_alerts_enabled_for_new_repositories: false,
     dependabot_security_updates_enabled_for_new_repositories: false,
     dependency_graph_enabled_for_new_repositories: false,
@@ -27,7 +27,7 @@ orgs.newOrg('jetty') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       has_wiki: false,
-      homepage: "https://eclipse.dev/jetty",
+      homepage: "https://jetty.org/",
       web_commit_signoff_required: false,
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
@@ -43,7 +43,7 @@ orgs.newOrg('jetty') {
       has_issues: false,
       has_projects: false,
       has_wiki: false,
-      homepage: "https://eclipse.dev/jetty",
+      homepage: "https://jetty.org/",
       web_commit_signoff_required: false,
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
@@ -65,7 +65,7 @@ orgs.newOrg('jetty') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse Jetty® - Artifact Resources",
       has_wiki: false,
-      homepage: "https://eclipse.dev/jetty",
+      homepage: "https://jetty.org/",
       web_commit_signoff_required: false,
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
@@ -78,7 +78,7 @@ orgs.newOrg('jetty') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse Jetty® - Maven Assembly Descriptors",
       has_wiki: false,
-      homepage: "https://eclipse.dev/jetty",
+      homepage: "https://jetty.org/",
       web_commit_signoff_required: false,
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
@@ -91,7 +91,7 @@ orgs.newOrg('jetty') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse Jetty® - Build Support",
       has_wiki: false,
-      homepage: "https://eclipse.dev/jetty",
+      homepage: "https://jetty.org/",
       web_commit_signoff_required: false,
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
@@ -104,7 +104,7 @@ orgs.newOrg('jetty') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse Jetty® - Examples",
       has_wiki: true,
-      homepage: "https://eclipse.dev/jetty",
+      homepage: "https://jetty.org/",
       web_commit_signoff_required: false,
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
@@ -114,7 +114,7 @@ orgs.newOrg('jetty') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse Jetty® - Parent Pom",
       has_wiki: false,
-      homepage: "https://eclipse.dev/jetty",
+      homepage: "https://jetty.org/",
       web_commit_signoff_required: false,
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
@@ -136,7 +136,7 @@ orgs.newOrg('jetty') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse Jetty® - Performance Tool Helper",
       has_wiki: false,
-      homepage: "https://eclipse.dev/jetty",
+      homepage: "https://jetty.org/",
       web_commit_signoff_required: false,
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
@@ -149,7 +149,7 @@ orgs.newOrg('jetty') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse Jetty® - General Schemas Jar",
       has_wiki: false,
-      homepage: "https://eclipse.dev/jetty",
+      homepage: "https://jetty.org/",
       web_commit_signoff_required: false,
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
@@ -163,7 +163,7 @@ orgs.newOrg('jetty') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse Jetty® - Servlet API (javax and jakarta)",
       has_wiki: false,
-      homepage: "https://eclipse.dev/jetty",
+      homepage: "https://jetty.org/",
       topics+: [
         "eclipse",
         "jakartaee",
@@ -182,7 +182,7 @@ orgs.newOrg('jetty') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse Jetty® - SetUID Module",
       has_wiki: false,
-      homepage: "https://eclipse.dev/jetty",
+      homepage: "https://jetty.org/",
       web_commit_signoff_required: false,
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
@@ -213,7 +213,7 @@ orgs.newOrg('jetty') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse Jetty® - Test Policy",
       has_wiki: false,
-      homepage: "https://eclipse.dev/jetty",
+      homepage: "https://jetty.org/",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
@@ -228,7 +228,7 @@ orgs.newOrg('jetty') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse Jetty® - Servlet Engine and Http Server project repository (jetty.toolchain)",
       has_wiki: false,
-      homepage: "https://eclipse.dev/jetty",
+      homepage: "https://jetty.org/",
       web_commit_signoff_required: false,
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
@@ -286,7 +286,7 @@ orgs.newOrg('jetty') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse Jetty® - WebSocket API (javax and jakarta)",
       has_wiki: false,
-      homepage: "https://eclipse.dev/jetty",
+      homepage: "https://jetty.org/",
       topics+: [
         "eclipse",
         "jakartaee",
@@ -305,7 +305,7 @@ orgs.newOrg('jetty') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse Jetty® - XHTML Schemas Jar",
       has_wiki: false,
-      homepage: "https://eclipse.dev/jetty",
+      homepage: "https://jetty.org/",
       web_commit_signoff_required: false,
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
@@ -319,7 +319,7 @@ orgs.newOrg('jetty') {
       dependabot_security_updates_enabled: true,
       description: "jetty docker",
       has_wiki: false,
-      homepage: "https://eclipse.dev/jetty",
+      homepage: "https://jetty.org/",
       web_commit_signoff_required: false,
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
@@ -336,11 +336,11 @@ orgs.newOrg('jetty') {
     orgs.newRepo('jetty.project') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "jetty-12.0.x",
+      default_branch: "jetty-12.1.x",
       delete_branch_on_merge: false,
-      description: "Eclipse Jetty® - Web Container & Clients - supports HTTP/2, HTTP/1.1, HTTP/1.0, websocket, servlets, and more",
+      description: "Eclipse Jetty® - Web Container & Clients - supports HTTP/3, HTTP/2, HTTP/1, websocket, servlets, and more",
       has_wiki: false,
-      homepage: "https://eclipse.dev/jetty",
+      homepage: "https://jetty.org/",
       topics+: [
         "eclipse",
         "embedded",
@@ -349,12 +349,12 @@ orgs.newOrg('jetty') {
         "http-client",
         "http-server",
         "http2",
-        "http2-push",
         "http3",
         "https",
         "jakartaee",
         "java",
         "jetty",
+        "jpms",
         "jsp",
         "osgi",
         "servlet",
@@ -386,6 +386,7 @@ orgs.newOrg('jetty') {
           include_refs+: [
             "refs/heads/jetty-10.0.x",
             "refs/heads/jetty-12.0.x",
+            "refs/heads/jetty-12.1.x",
             "refs/heads/jetty-9.4.x"
           ],
           required_approving_review_count: 1,
@@ -404,7 +405,7 @@ orgs.newOrg('jetty') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      description: "Eclipse Jetty® - Under Construction",
+      description: "Eclipse Jetty® - jetty.org website",
       has_wiki: false,
       homepage: "http://jetty.org",
       web_commit_signoff_required: false,
