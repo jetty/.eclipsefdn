@@ -2,4 +2,4 @@
 *             @jetty/eclipsefdn-releng
 
 # Otterdog related configurations are also owned by the security team.
-/otterdog/**  @jetty/eclipsefdn-security @jetty/eclipsefdn-releng
+/otterdog/**  @jetty/eclipsefdn-security
