@@ -85,7 +85,7 @@ orgs.newOrg('rt.jetty', 'jetty') {
     },
     orgs.newRepo('jetty-examples') {
       allow_merge_commit: true,
-      default_branch: "12.0.x",
+      default_branch: "12.1.x",
       dependabot_security_updates_enabled: true,
       description: "Eclipse Jetty® - Examples",
       homepage: "https://jetty.org/",
