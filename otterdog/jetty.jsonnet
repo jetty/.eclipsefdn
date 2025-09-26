@@ -311,6 +311,9 @@ orgs.newOrg('rt.jetty', 'jetty') {
             "@jetty/rt-jetty-pmc"
           ],
           include_refs+: [
+            "refs/heads/jetty-9.4.x",
+            "refs/heads/jetty-10.0.x",
+            "refs/heads/jetty-11.0.x",
             "refs/heads/jetty-12.0.x",
             "refs/heads/jetty-12.1.x"
           ],
@@ -323,15 +326,6 @@ orgs.newOrg('rt.jetty', 'jetty') {
               "continuous-integration/jenkins/pr-merge"
             ],
           },
-        },
-        orgs.newRepoRuleset('read-only-branches') {
-          allows_updates: false,
-          allows_deletions: false,
-          include_refs+: [
-            "refs/heads/jetty-9.4.x",
-            "refs/heads/jetty-10.0.x",
-            "refs/heads/jetty-11.0.x"
-          ],
         },
       ],
     },
