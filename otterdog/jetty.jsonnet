@@ -327,6 +327,16 @@ orgs.newOrg('rt.jetty', 'jetty') {
             ],
           },
         },
+        orgs.newRepoRuleset('read-only-branches') {
+          enforcement: "disabled",
+          allows_updates: false,
+          allows_deletions: false,
+          include_refs+: [
+            "refs/heads/jetty-9.4.x",
+            "refs/heads/jetty-10.0.x",
+            "refs/heads/jetty-11.0.x"
+          ],
+        },
       ],
     },
     orgs.newRepo('jetty.website') {
