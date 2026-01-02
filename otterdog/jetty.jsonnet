@@ -328,7 +328,7 @@ orgs.newOrg('rt.jetty', 'jetty') {
           },
         },
         orgs.newRepoRuleset('read-only-branches') {
-          enforcement: "disabled",
+          enforcement: "active",
           allows_updates: false,
           allows_deletions: false,
           include_refs+: [
